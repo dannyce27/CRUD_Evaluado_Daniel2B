@@ -39,17 +39,14 @@ class activity_Registrarse : AppCompatActivity() {
             GlobalScope.launch(Dispatchers.IO) {
 
                 val objConexion = claseConexion().cadenaConexion()
-                val crearUsuario =
-                    objConexion?.prepareStatement("INSERT INTO Usuario(UUID, Correo_Usuario, Contraseña_Usuario, ) VALUES (?, ?, ?)")!!
+                val crearUsuario = objConexion?.prepareStatement("INSERT INTO Usuario(UUID, nombre_Usuario,contrasena_Usuario, correo_Usuario) VALUES (?, ?, ?, ?)")!!
                 crearUsuario.setString(1, UUID.randomUUID().toString())
-                crearUsuario.setString(2, txtCorreo.text.toString())
+                crearUsuario.setString(2, txtUsuario.text.toString())
                 crearUsuario.setString(3, contrasena.text.toString())
+                crearUsuario.setString(4, txtCorreo.text.toString())
                 crearUsuario.executeUpdate()
                 withContext(Dispatchers.Main) {
-                    //Abro otra corrutina o "Hilo" para mostrar un mensaje y limpiar los campos
-                    //Lo hago en el Hilo Main por que el hilo IO no permite mostrar nada en pantalla
-                    Toast.makeText(this@activity_Registrarse, "Usuario creado", Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(this@activity_Registrarse, "Usuario creado", Toast.LENGTH_SHORT).show()
                     txtUsuario.setText("")
                     txtCorreo.setText("")
                     contrasena.setText("")
