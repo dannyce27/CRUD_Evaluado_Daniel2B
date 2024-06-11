@@ -33,9 +33,9 @@ class activity_Login : AppCompatActivity() {
 
             GlobalScope.launch(Dispatchers.IO) {
                 val objConexion = claseConexion().cadenaConexion()
-                val comprobarUsuario =objConexion?.prepareStatement("SELECT * FROM Usuario WHERE Correo_Usuario = ? AND Contraseña_Usuario = ?")!!
-                comprobarUsuario.setString(1, txtCorreo.text.toString())
-                comprobarUsuario.setString(2, txtContrasena.text.toString())
+                val comprobarUsuario =objConexion?.prepareStatement("SELECT * FROM tbUsuario WHERE contrasena_Usuario = ? AND correo_Usuario = ?")!!
+                comprobarUsuario.setString(1, txtContrasena.text.toString())
+                comprobarUsuario.setString(2, txtCorreo.text.toString())
                 val resultado = comprobarUsuario.executeQuery()
                 if(resultado.next()){
                     startActivity(pantallaMain)
