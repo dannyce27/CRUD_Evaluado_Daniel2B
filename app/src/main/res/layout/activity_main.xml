@@ -21,4 +21,99 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092" />
 
+    <EditText
+        android:id="@+id/txtNumero"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Número"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="181dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Titulo"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="169dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <EditText
+        android:id="@+id/txtAutor"
+        android:layout_width="175dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="Autor"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <EditText
+        android:id="@+id/txtEmailAutor"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Email de Autor"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <EditText
+        android:id="@+id/txtFechaCreacion"
+        android:layout_width="177dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Fecha de Creacion"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <EditText
+        android:id="@+id/txtFechaFinalizacion"
+        android:layout_width="178dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Fecha de Finalizacion"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <EditText
+        android:id="@+id/txtEstado"
+        android:layout_width="165dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="Activo o Finalizado"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <Button
+        android:id="@+id/btnGuardarDatos"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:text="Guardar"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="438dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvTickets"
+        android:layout_width="406dp"
+        android:layout_height="214dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="516dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

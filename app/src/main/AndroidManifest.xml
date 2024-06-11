@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,11 +15,14 @@
         android:theme="@style/Theme.CRUD_Evaluado_DanielS"
         tools:targetApi="31">
         <activity
+            android:name=".activity_item_card"
+            android:exported="false" />
+        <activity
             android:name=".activity_Registrarse"
             android:exported="false" />
         <activity
             android:name=".activity_Login"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +31,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
